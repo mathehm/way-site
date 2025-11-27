@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cores padrão - serão sobrescritas dinamicamente pela igreja */
+    --color-primary: 37 99 235; /* blue-600 */
+    --color-primary-dark: 29 78 216; /* blue-700 */
+    --color-secondary: 124 58 237; /* violet-600 */
+    --color-secondary-dark: 109 40 217; /* violet-700 */
+    --color-accent: 245 158 11; /* amber-500 */
+    --color-accent-dark: 217 119 6; /* amber-600 */
+
+    /* Cores neutras fixas */
+    --color-background: 255 255 255;
+    --color-foreground: 15 23 42; /* slate-900 */
+    --color-muted: 148 163 184; /* slate-400 */
+    --color-border: 226 232 240; /* slate-200 */
+  }
+
+  /* Dark mode support (opcional para futuro) */
+  .dark {
+    --color-background: 15 23 42;
+    --color-foreground: 248 250 252;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  /* Gradientes customizados */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-primary-dark)));
+  }
+
+  .bg-gradient-secondary {
+    background: linear-gradient(135deg, rgb(var(--color-secondary)), rgb(var(--color-secondary-dark)));
+  }
+
+  /* Hover states customizados */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-primary-dark hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-secondary-dark hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-primary hover:text-white;
+  }
+}
