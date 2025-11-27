@@ -7,9 +7,9 @@
         v-if="hero?.backgroundImage"
         :src="hero.backgroundImage"
         :alt="hero.title"
-        class="w-full h-full object-cover"
+        class="h-full object-cover"
         loading="eager"
-        sizes="100vw"
+        width="100vw"
       />
 
       <!-- Overlay escuro para melhor legibilidade -->
