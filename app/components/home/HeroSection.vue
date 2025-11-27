@@ -2,9 +2,22 @@
   <section class="relative h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
     <!-- Background Image/Video -->
     <div class="absolute inset-0 z-0">
+      <!-- Background Video -->
+      <video
+        v-if="hero?.backgroundVideo"
+        :src="hero.backgroundVideo"
+        :poster="hero?.backgroundImage"
+        class="w-full h-full object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      />
+
       <!-- Background Image -->
       <NuxtImg
-        v-if="hero?.backgroundImage"
+        v-else-if="hero?.backgroundImage"
         :src="hero.backgroundImage"
         :alt="hero.title"
         class="w-full h-full object-cover"

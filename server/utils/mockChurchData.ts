@@ -331,24 +331,24 @@ export const mockChurchData: Record<string, ChurchConfig> = {
         body: 'Inter'
       },
       logo: {
-        main: 'https://placehold.co/200x60/000000/ffffff?text=Modern+Church',
-        white: 'https://placehold.co/200x60/ffffff/000000?text=Modern+Church',
-        favicon: 'https://placehold.co/32x32/000000/ffffff?text=M'
+        main: 'https://igrejacomproposito.com/wp-content/uploads/2022/01/cropped-Logo-Proposito-preto-grande-300x86.png',
+        white: 'https://igrejacomproposito.com/wp-content/uploads/2022/01/logo-300x70.png',
+        favicon: 'https://placehold.co/32x32/000000/ffffff?text=icp'
       },
       social: {
-        instagram: 'https://instagram.com/modernchurch',
-        facebook: 'https://facebook.com/modernchurch',
-        youtube: 'https://youtube.com/@modernchurch',
-        spotify: 'https://open.spotify.com/show/modernchurch'
+        instagram: 'https://instagram.com/igrejacomproposito',
+        facebook: 'https://www.facebook.com/igrejacompropositobr',
+        youtube: 'https://www.youtube.com/c/IgrejacomProp%C3%B3sitoOnline',
+        spotify: 'https://open.spotify.com/show/5iEvJesCmxAV4MJpMbYZx9?si=5A2IEhHaRySBoSJJi99bjQ'
       }
     },
 
     content: {
       hero: {
-        title: 'Bem-vindo à Modern Church',
+        title: 'Igreja com Propósito',
         subtitle: 'Mensagem da Semana',
-        description: 'Uma igreja contemporânea para uma geração em movimento.',
-        backgroundImage: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=1920&h=1080&fit=crop',
+        description: 'Uma igreja ativa para uma geração em movimento.',
+        backgroundVideo: 'https://igrejacomproposito.com/wp-content/uploads/2023/01/Teste-BG.mp4',
         ctaText: 'Assistir Agora',
         ctaLink: '/watch'
       },
@@ -473,10 +473,10 @@ export const mockChurchData: Record<string, ChurchConfig> = {
     },
 
     metadata: {
-      name: 'Modern Church',
-      tagline: 'Uma igreja para uma nova geração',
-      description: 'Igreja contemporânea, inspiradora e centrada em Jesus.',
-      keywords: ['igreja moderna', 'worship', 'fé', 'jesus', 'são paulo'],
+      name: 'Igreja com Propósito',
+      tagline: 'Glorificando a Deus e abençoando vidas',
+      description: 'Uma igreja que impacta gerações através do amor de Cristo.',
+      keywords: ['igreja', 'worship', 'fé', 'jesus', 'são paulo'],
       language: 'pt-BR'
     },
 
