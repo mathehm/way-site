@@ -118,7 +118,6 @@
             <h4 class="font-semibold mb-4">Mais</h4>
             <ul class="space-y-2 text-sm">
               <li><NuxtLink to="/stories" class="text-muted hover:text-primary transition-colors">Histórias</NuxtLink></li>
-              <li><NuxtLink to="/careers" class="text-muted hover:text-primary transition-colors">Carreiras</NuxtLink></li>
               <li><NuxtLink to="/contact" class="text-muted hover:text-primary transition-colors">Contato</NuxtLink></li>
             </ul>
           </div>

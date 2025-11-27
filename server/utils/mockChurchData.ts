@@ -209,7 +209,7 @@ export const mockChurchData: Record<string, ChurchConfig> = {
   },
 
   // Igreja de exemplo com cores diferentes
-  gracachurch: {
+  graca: {
     id: '2',
     subdomain: 'gracachurch',
     template: 'modern',
