@@ -7,7 +7,7 @@
           Localizações
         </h2>
         <p class="text-lg opacity-90 max-w-2xl mx-auto">
-          Encontre uma igreja perto de você ou participe online
+          Encontre um {{ customization?.names?.celula || 'célula' }} perto de você ou participe online
         </p>
       </div>
 
@@ -63,5 +63,5 @@
 </template>
 
 <script setup lang="ts">
-const { locations } = useChurchContent()
+const { locations, customization } = useChurchContent()
 </script>

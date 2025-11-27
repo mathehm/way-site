@@ -35,6 +35,9 @@ export interface ChurchCustomization {
   fonts: ChurchFonts
   logo: ChurchLogo
   social: ChurchSocial
+  names?: {
+    celula?: string // Nome customizado para "célula"
+  } 
 }
 
 export interface ChurchHeroContent {

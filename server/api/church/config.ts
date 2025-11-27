@@ -7,7 +7,7 @@ import type { ChurchAPIResponse } from '~/types/church'
 export default defineEventHandler(async (event): Promise<ChurchAPIResponse> => {
   try {
     // Pega o subdomínio do contexto (adicionado pelo plugin subdomain.ts)
-    const subdomain = event.context.subdomain || 'demo'
+    const subdomain = event.context.subdomain || 'icp'
 
     // Em desenvolvimento, usa dados mock
     if (process.env.NODE_ENV === 'development' || !process.env.GOLANG_API_URL) {

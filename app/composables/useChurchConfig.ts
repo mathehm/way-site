@@ -91,6 +91,7 @@ export const useChurchContent = () => {
   const actionCards = computed(() => config.value?.content.actionCards || [])
   const events = computed(() => config.value?.content.events || [])
   const locations = computed(() => config.value?.content.locations || [])
+  const customization = computed(() => config.value?.customization || null)
   const ctaSections = computed(() => config.value?.content.ctaSections || [])
 
   return {
@@ -99,6 +100,7 @@ export const useChurchContent = () => {
     actionCards,
     events,
     locations,
+    customization,
     ctaSections
   }
 }

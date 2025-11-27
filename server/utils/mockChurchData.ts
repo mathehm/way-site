@@ -6,6 +6,181 @@ import type { ChurchConfig } from '~/types/church'
  */
 
 export const mockChurchData: Record<string, ChurchConfig> = {
+  icp: {
+    id: '2',
+    subdomain: 'modernblack',
+    template: 'modern',
+    customization: {
+      colors: {
+        primary: '#000000',      // black
+        primaryDark: '#0a0a0a',  // neutral-950
+        secondary: '#1f2937',    // gray-800
+        secondaryDark: '#111827',// gray-900
+        accent: '#22d3ee',       // cyan-400 (neon moderno)
+        accentDark: '#0891b2'    // cyan-700
+      },
+      fonts: {
+        heading: 'Montserrat',
+        body: 'Inter'
+      },
+      logo: {
+        main: 'https://igrejacomproposito.com/wp-content/uploads/2022/01/cropped-Logo-Proposito-preto-grande-300x86.png',
+        white: 'https://igrejacomproposito.com/wp-content/uploads/2022/01/logo-300x70.png',
+        favicon: 'https://placehold.co/32x32/000000/ffffff?text=icp'
+      },
+      social: {
+        instagram: 'https://instagram.com/igrejacomproposito',
+        facebook: 'https://www.facebook.com/igrejacompropositobr',
+        youtube: 'https://www.youtube.com/c/IgrejacomProp%C3%B3sitoOnline',
+        spotify: 'https://open.spotify.com/show/5iEvJesCmxAV4MJpMbYZx9?si=5A2IEhHaRySBoSJJi99bjQ'
+      },
+      names: {
+        celula:'Nexo',
+      }
+    },
+
+    content: {
+      hero: {
+        title: 'Igreja com Propósito',
+        subtitle: 'Mensagem da Semana',
+        description: 'Uma igreja ativa para uma geração em movimento.',
+        backgroundVideo: 'https://igrejacomproposito.com/wp-content/uploads/2023/01/Teste-BG.mp4',
+        ctaText: 'Assistir Agora',
+        ctaLink: '/watch'
+      },
+
+      actionCards: [
+        {
+          id: '1',
+          icon: 'mdi:account-plus',
+          title: 'Primeira vez aqui?',
+          description: 'Descubra quem somos',
+          link: '/new'
+        },
+        {
+          id: '2',
+          icon: 'mdi:lightning-bolt',
+          title: 'Próximos Passos',
+          description: 'Encontre seu propósito',
+          link: '/next'
+        },
+        {
+          id: '3',
+          icon: 'mdi:water',
+          title: 'Batismos',
+          description: 'Declare sua fé publicamente',
+          link: '/baptism'
+        },
+        {
+          id: '4',
+          icon: 'mdi:earth',
+          title: 'Pequenos Grupos',
+          description: 'Conecte-se com pessoas',
+          link: '/groups'
+        },
+        {
+          id: '5',
+          icon: 'mdi:hand-heart',
+          title: 'Servir',
+          description: 'Faça parte do time',
+          link: '/serve'
+        }
+      ],
+
+      events: [
+        {
+          id: '1',
+          slug: 'ano-novo-2025',
+          title: 'Reveillon Worship Night',
+          subtitle: 'Virada com Propósito',
+          description: 'Uma noite para agradecer, celebrar e declarar um novo tempo.',
+          image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop',
+          backgroundColor: '#1f2937', // gray-800
+          startDate: '2025-12-31',
+          endDate: '2026-01-01',
+          ctaText: 'Participar',
+          ctaLink: '/events/ano-novo-2025'
+        },
+        {
+          id: '2',
+          slug: 'conferencia-2025',
+          title: 'CONFERÊNCIA 2025',
+          subtitle: 'Despertando uma Geração',
+          description: 'Três dias de imersão com palavra, louvor e presença.',
+          image: 'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop',
+          backgroundColor: '#000000', // black
+          startDate: '2025-09-10',
+          endDate: '2025-09-12',
+          ctaText: 'Garanta sua vaga',
+          ctaLink: '/events/conferencia-2025'
+        }
+      ],
+
+      locations: [
+        {
+          id: '1',
+          name: 'Campus Central',
+          city: 'São Paulo',
+          country: 'Brasil',
+          image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop',
+          address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+          mapsLink: 'https://maps.google.com'
+        },
+        {
+          id: '2',
+          name: 'Campus Urbano',
+          city: 'São Paulo',
+          country: 'Brasil',
+          image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop',
+          address: 'Rua Augusta, 800 - São Paulo, SP',
+          mapsLink: 'https://maps.google.com'
+        }
+      ],
+
+      ctaSections: [
+        {
+          id: '1',
+          title: 'SEJA PARTE',
+          subtitle: 'Descubra o movimento',
+          description:
+            'Participe do ONBOARDING — uma experiência para conhecer a visão, valores e próximos passos.',
+          backgroundColor: '#f9fafb',
+          textColor: '#000000',
+          ctaText: 'Inscrever-se',
+          ctaLink: '/onboarding',
+          image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30'
+        }
+      ],
+
+      about: {
+        title: 'Quem Somos',
+        description:
+          'Uma igreja moderna, relevante e apaixonada por Jesus. Acreditamos que cada pessoa carrega um propósito eterno.',
+        mission: 'Conectar pessoas a Jesus e transformar cidades.',
+        vision: 'Uma igreja para todos, construída sobre excelência, presença e impacto real.',
+        image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop'
+      },
+
+      contact: {
+        email: 'contato@modernchurch.com',
+        phone: '+55 11 98765-4321',
+        address: 'Av. Faria Lima, 2000 - São Paulo, SP'
+      }
+    },
+
+    metadata: {
+      name: 'Igreja com Propósito',
+      tagline: 'Glorificando a Deus e abençoando vidas',
+      description: 'Uma igreja que impacta gerações através do amor de Cristo.',
+      keywords: ['igreja', 'worship', 'fé', 'jesus', 'são paulo'],
+      language: 'pt-BR'
+    },
+
+    active: true,
+    createdAt: '2025-01-01T00:00:00Z',
+    updatedAt: '2025-01-15T00:00:00Z'
+  },
+  
   demo: {
     id: '1',
     subdomain: 'demo',
@@ -312,183 +487,11 @@ export const mockChurchData: Record<string, ChurchConfig> = {
     createdAt: '2025-01-10T00:00:00Z',
     updatedAt: '2025-01-15T00:00:00Z'
   },
-
-  modern: {
-    id: '2',
-    subdomain: 'modernblack',
-    template: 'modern',
-    customization: {
-      colors: {
-        primary: '#000000',      // black
-        primaryDark: '#0a0a0a',  // neutral-950
-        secondary: '#1f2937',    // gray-800
-        secondaryDark: '#111827',// gray-900
-        accent: '#22d3ee',       // cyan-400 (neon moderno)
-        accentDark: '#0891b2'    // cyan-700
-      },
-      fonts: {
-        heading: 'Montserrat',
-        body: 'Inter'
-      },
-      logo: {
-        main: 'https://igrejacomproposito.com/wp-content/uploads/2022/01/cropped-Logo-Proposito-preto-grande-300x86.png',
-        white: 'https://igrejacomproposito.com/wp-content/uploads/2022/01/logo-300x70.png',
-        favicon: 'https://placehold.co/32x32/000000/ffffff?text=icp'
-      },
-      social: {
-        instagram: 'https://instagram.com/igrejacomproposito',
-        facebook: 'https://www.facebook.com/igrejacompropositobr',
-        youtube: 'https://www.youtube.com/c/IgrejacomProp%C3%B3sitoOnline',
-        spotify: 'https://open.spotify.com/show/5iEvJesCmxAV4MJpMbYZx9?si=5A2IEhHaRySBoSJJi99bjQ'
-      }
-    },
-
-    content: {
-      hero: {
-        title: 'Igreja com Propósito',
-        subtitle: 'Mensagem da Semana',
-        description: 'Uma igreja ativa para uma geração em movimento.',
-        backgroundVideo: 'https://igrejacomproposito.com/wp-content/uploads/2023/01/Teste-BG.mp4',
-        ctaText: 'Assistir Agora',
-        ctaLink: '/watch'
-      },
-
-      actionCards: [
-        {
-          id: '1',
-          icon: 'mdi:account-plus',
-          title: 'Primeira vez aqui?',
-          description: 'Descubra quem somos',
-          link: '/new'
-        },
-        {
-          id: '2',
-          icon: 'mdi:lightning-bolt',
-          title: 'Próximos Passos',
-          description: 'Encontre seu propósito',
-          link: '/next'
-        },
-        {
-          id: '3',
-          icon: 'mdi:water',
-          title: 'Batismos',
-          description: 'Declare sua fé publicamente',
-          link: '/baptism'
-        },
-        {
-          id: '4',
-          icon: 'mdi:earth',
-          title: 'Pequenos Grupos',
-          description: 'Conecte-se com pessoas',
-          link: '/groups'
-        },
-        {
-          id: '5',
-          icon: 'mdi:hand-heart',
-          title: 'Servir',
-          description: 'Faça parte do time',
-          link: '/serve'
-        }
-      ],
-
-      events: [
-        {
-          id: '1',
-          slug: 'ano-novo-2025',
-          title: 'Reveillon Worship Night',
-          subtitle: 'Virada com Propósito',
-          description: 'Uma noite para agradecer, celebrar e declarar um novo tempo.',
-          image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop',
-          backgroundColor: '#1f2937', // gray-800
-          startDate: '2025-12-31',
-          endDate: '2026-01-01',
-          ctaText: 'Participar',
-          ctaLink: '/events/ano-novo-2025'
-        },
-        {
-          id: '2',
-          slug: 'conferencia-2025',
-          title: 'CONFERÊNCIA 2025',
-          subtitle: 'Despertando uma Geração',
-          description: 'Três dias de imersão com palavra, louvor e presença.',
-          image: 'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop',
-          backgroundColor: '#000000', // black
-          startDate: '2025-09-10',
-          endDate: '2025-09-12',
-          ctaText: 'Garanta sua vaga',
-          ctaLink: '/events/conferencia-2025'
-        }
-      ],
-
-      locations: [
-        {
-          id: '1',
-          name: 'Campus Central',
-          city: 'São Paulo',
-          country: 'Brasil',
-          image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop',
-          address: 'Av. Faria Lima, 2000 - São Paulo, SP',
-          mapsLink: 'https://maps.google.com'
-        },
-        {
-          id: '2',
-          name: 'Campus Urbano',
-          city: 'São Paulo',
-          country: 'Brasil',
-          image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop',
-          address: 'Rua Augusta, 800 - São Paulo, SP',
-          mapsLink: 'https://maps.google.com'
-        }
-      ],
-
-      ctaSections: [
-        {
-          id: '1',
-          title: 'SEJA PARTE',
-          subtitle: 'Descubra o movimento',
-          description:
-            'Participe do ONBOARDING — uma experiência para conhecer a visão, valores e próximos passos.',
-          backgroundColor: '#f9fafb',
-          textColor: '#000000',
-          ctaText: 'Inscrever-se',
-          ctaLink: '/onboarding',
-          image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30'
-        }
-      ],
-
-      about: {
-        title: 'Quem Somos',
-        description:
-          'Uma igreja moderna, relevante e apaixonada por Jesus. Acreditamos que cada pessoa carrega um propósito eterno.',
-        mission: 'Conectar pessoas a Jesus e transformar cidades.',
-        vision: 'Uma igreja para todos, construída sobre excelência, presença e impacto real.',
-        image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop'
-      },
-
-      contact: {
-        email: 'contato@modernchurch.com',
-        phone: '+55 11 98765-4321',
-        address: 'Av. Faria Lima, 2000 - São Paulo, SP'
-      }
-    },
-
-    metadata: {
-      name: 'Igreja com Propósito',
-      tagline: 'Glorificando a Deus e abençoando vidas',
-      description: 'Uma igreja que impacta gerações através do amor de Cristo.',
-      keywords: ['igreja', 'worship', 'fé', 'jesus', 'são paulo'],
-      language: 'pt-BR'
-    },
-
-    active: true,
-    createdAt: '2025-01-01T00:00:00Z',
-    updatedAt: '2025-01-15T00:00:00Z'
-  }
 }
 
 /**
  * Função helper para obter dados da igreja
  */
 export function getChurchData(subdomain: string): ChurchConfig | null {
-  return mockChurchData[subdomain] || mockChurchData.demo
+  return mockChurchData[subdomain] || mockChurchData.icp
 }
