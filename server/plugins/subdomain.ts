@@ -12,7 +12,7 @@ export default defineNitroPlugin((nitroApp) => {
     // Divide o host em partes (ex: igrejax.seudominio.com -> ['igrejax', 'seudominio', 'com'])
     const parts = hostWithoutPort.split('.')
 
-    let subdomain = 'icp' // Subdomínio padrão
+    let subdomain = 'demo' // Subdomínio padrão
 
     // Em desenvolvimento (localhost), usa 'icp'
     if (hostWithoutPort === 'localhost') {
