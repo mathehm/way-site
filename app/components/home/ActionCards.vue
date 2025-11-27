@@ -6,10 +6,10 @@
           v-for="card in actionCards"
           :key="card.id"
           :to="card.link"
-          class="group flex flex-col items-center text-center p-4 rounded-xl border-2 border-border hover:border-primary hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          class="group flex flex-col items-center text-center p-4 rounded-xl border-2 border-border hover:border-primary hover:shadow-lg transition-all duration-100 hover:-translate-y-1"
         >
           <!-- Icon -->
-          <div class="w-8 sm:w-12 h-8 sm:h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 mb-2">
+          <div class="w-8 sm:w-12 h-8 sm:h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-100 mb-2">
             <Icon :name="card.icon" class="w-4 sm:w-6 h-4 sm:h-6" />
           </div>
 
