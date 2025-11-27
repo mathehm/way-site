@@ -7,7 +7,7 @@
         v-if="hero?.backgroundImage"
         :src="hero.backgroundImage"
         :alt="hero.title"
-        class="h-full object-cover"
+        class="w-full h-full object-cover"
         loading="eager"
         width="100vw"
       />

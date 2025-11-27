@@ -8,7 +8,7 @@
           class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
         >
           <!-- Background Image -->
-          <div class="relative h-[400px] overflow-hidden">
+          <div class="relative h-[300px] sm:h-[400px] overflow-hidden">
             <NuxtImg
               :src="event.image"
               :alt="event.title"
@@ -25,17 +25,17 @@
             <!-- Content -->
             <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
               <!-- Subtitle -->
-              <p v-if="event.subtitle" class="text-sm font-semibold uppercase tracking-wider mb-2 opacity-90">
+              <p v-if="event.subtitle" class="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 opacity-90">
                 {{ event.subtitle }}
               </p>
 
               <!-- Title -->
-              <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-4">
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-heading font-bold mb-2 sm:mb-4">
                 {{ event.title }}
               </h2>
 
               <!-- Description -->
-              <p class="text-lg mb-6 opacity-95 max-w-xl">
+              <p class="text-sm sm:text-lg mb-6 opacity-95 max-w-xl">
                 {{ event.description }}
               </p>
 
@@ -43,7 +43,7 @@
               <div>
                 <NuxtLink
                   :to="event.ctaLink"
-                  class="inline-flex items-center gap-2 bg-white text-foreground hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
+                  class="inline-flex items-center gap-2 bg-white text-sm sm:text-medium text-foreground hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
                 >
                   {{ event.ctaText }}
                   <Icon name="mdi:arrow-right" class="w-5 h-5" />
