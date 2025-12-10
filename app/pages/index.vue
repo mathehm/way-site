@@ -9,8 +9,8 @@
     <!-- Events Section -->
     <HomeEventsSection />
 
-    <!-- Locations Section -->
-    <HomeLocationsSection />
+    <!-- Cells Section -->
+    <HomeCellsSection />
 
     <!-- CTA Sections (como Activate) -->
     <HomeCTASections />

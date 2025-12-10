@@ -108,12 +108,44 @@ export interface ChurchContact {
   address: string
 }
 
+export interface ChurchCellNetwork {
+  id: string
+  name: string
+  description?: string
+  color: string // Cor da rede (ex: #2563eb)
+  leaders: string[] // Nomes dos líderes da rede
+}
+
+export interface ChurchCell {
+  id: string
+  name: string
+  networkId: string // ID da rede à qual pertence
+  leaders: string[] // Nomes dos líderes da célula
+  day: string // Dia da semana (ex: "Terça-feira")
+  time: string // Horário (ex: "19h30")
+  address: string // Endereço completo
+  phone: string // Telefone de contato
+  description: string // Descrição da célula
+  image?: string // Foto/imagem da célula
+  coordinates: {
+    lat: number
+    lng: number
+  }
+  mapsLink: string // Link do Google Maps
+}
+
+export interface ChurchCellsData {
+  networks: ChurchCellNetwork[]
+  cells: ChurchCell[]
+}
+
 export interface ChurchContent {
   hero: ChurchHeroContent
   actionCards: ChurchActionCard[]
   events: ChurchEvent[]
   locations: ChurchLocation[]
   ctaSections: ChurchCTASection[]
+  cells?: ChurchCellsData
   about?: ChurchAbout
   contact?: ChurchContact
 }

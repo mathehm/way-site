@@ -165,6 +165,136 @@ export const mockChurchData: Record<string, ChurchConfig> = {
         email: 'contato@modernchurch.com',
         phone: '+55 11 98765-4321',
         address: 'Av. Faria Lima, 2000 - São Paulo, SP'
+      },
+
+      cells: {
+        networks: [
+          {
+            id: 'rede-norte',
+            name: 'Rede Norte',
+            description: 'Células da região norte de Americana',
+            color: '#2563eb', // blue-600
+            leaders: ['João Silva', 'Maria Santos']
+          },
+          {
+            id: 'rede-sul',
+            name: 'Rede Sul',
+            description: 'Células da região sul de Americana',
+            color: '#059669', // emerald-600
+            leaders: ['Pedro Oliveira', 'Ana Costa']
+          },
+          {
+            id: 'rede-centro',
+            name: 'Rede Centro',
+            description: 'Células da região central de Americana',
+            color: '#dc2626', // red-600
+            leaders: ['Carlos Mendes', 'Juliana Lima']
+          }
+        ],
+        cells: [
+          {
+            id: 'celula-1',
+            name: 'Célula Vida Nova',
+            networkId: 'rede-norte',
+            leaders: ['Lucas Ferreira', 'Beatriz Alves'],
+            day: 'Terça-feira',
+            time: '19h30',
+            address: 'Rua das Acácias, 123 - Jardim Boer, Americana - SP',
+            phone: '(19) 99999-1111',
+            description: 'Célula focada em jovens e jovens adultos, com estudos dinâmicos e relevantes para o dia a dia.',
+            image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=400&fit=crop',
+            coordinates: {
+              lat: -22.7341,
+              lng: -47.3316
+            },
+            mapsLink: 'https://maps.google.com/?q=-22.7341,-47.3316'
+          },
+          {
+            id: 'celula-2',
+            name: 'Célula Esperança',
+            networkId: 'rede-norte',
+            leaders: ['Roberto Lima', 'Fernanda Costa'],
+            day: 'Quinta-feira',
+            time: '20h00',
+            address: 'Av. Brasil, 456 - Centro, Americana - SP',
+            phone: '(19) 99999-2222',
+            description: 'Célula com foco em famílias, onde compartilhamos experiências e crescemos juntos na fé.',
+            image: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&h=400&fit=crop',
+            coordinates: {
+              lat: -22.7389,
+              lng: -47.3306
+            },
+            mapsLink: 'https://maps.google.com/?q=-22.7389,-47.3306'
+          },
+          {
+            id: 'celula-3',
+            name: 'Célula Fé Viva',
+            networkId: 'rede-sul',
+            leaders: ['Marcos Souza', 'Patrícia Rocha'],
+            day: 'Quarta-feira',
+            time: '19h00',
+            address: 'Rua São Paulo, 789 - Jardim Ipiranga, Americana - SP',
+            phone: '(19) 99999-3333',
+            description: 'Encontros descontraídos com adoração e palavra, ideal para quem busca comunhão verdadeira.',
+            image: 'https://images.unsplash.com/photo-1528605105345-5344ea20e269?w=600&h=400&fit=crop',
+            coordinates: {
+              lat: -22.7502,
+              lng: -47.3398
+            },
+            mapsLink: 'https://maps.google.com/?q=-22.7502,-47.3398'
+          },
+          {
+            id: 'celula-4',
+            name: 'Célula Restauração',
+            networkId: 'rede-sul',
+            leaders: ['André Martins', 'Camila Dias'],
+            day: 'Sexta-feira',
+            time: '20h30',
+            address: 'Rua das Flores, 321 - Vila Belvedere, Americana - SP',
+            phone: '(19) 99999-4444',
+            description: 'Espaço de acolhimento e cura, onde experimentamos o amor de Deus de forma prática.',
+            image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&h=400&fit=crop',
+            coordinates: {
+              lat: -22.7456,
+              lng: -47.3442
+            },
+            mapsLink: 'https://maps.google.com/?q=-22.7456,-47.3442'
+          },
+          {
+            id: 'celula-5',
+            name: 'Célula Comunhão',
+            networkId: 'rede-centro',
+            leaders: ['Rafael Barbosa', 'Letícia Melo'],
+            day: 'Segunda-feira',
+            time: '19h30',
+            address: 'Av. Cillos, 654 - Centro, Americana - SP',
+            phone: '(19) 99999-5555',
+            description: 'Célula que valoriza relacionamentos profundos e estudo bíblico aprofundado.',
+            image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&h=400&fit=crop',
+            coordinates: {
+              lat: -22.7395,
+              lng: -47.3280
+            },
+            mapsLink: 'https://maps.google.com/?q=-22.7395,-47.3280'
+          },
+          {
+            id: 'celula-6',
+            name: 'Célula Impacto',
+            networkId: 'rede-centro',
+            leaders: ['Gabriel Torres', 'Priscila Nunes'],
+            day: 'Sábado',
+            time: '18h00',
+            address: 'Rua Oreste Brunetti, 987 - Vila Mathiensen, Americana - SP',
+            phone: '(19) 99999-6666',
+            description: 'Célula voltada para jovens profissionais, com discussões sobre fé e carreira.',
+            image: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop',
+            coordinates: {
+              lat: -22.7422,
+              lng: -47.3225
+            },
+            mapsLink: 'https://maps.google.com/?q=-22.7422,-47.3225'
+          }
+        ]
       }
     },
 
