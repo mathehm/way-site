@@ -94,12 +94,72 @@ export interface ChurchCTASection {
   image?: string
 }
 
-export interface ChurchAbout {
+export interface ChurchLeader {
+  id: string
+  name: string
+  role: string // Ex: "Pastor Principal", "Pastor de Jovens"
+  bio: string
+  image?: string
+  social?: {
+    instagram?: string
+    facebook?: string
+    email?: string
+  }
+}
+
+export interface ChurchValue {
+  id: string
   title: string
   description: string
-  mission?: string
-  vision?: string
+  icon: string
+}
+
+export interface ChurchHistoryMilestone {
+  year: string
+  title: string
+  description: string
   image?: string
+}
+
+export interface ChurchStats {
+  members?: number
+  yearsActive?: number
+  locations?: number
+  cells?: number
+  ministries?: number
+}
+
+export interface ChurchAbout {
+  hero: {
+    title: string
+    subtitle?: string
+    backgroundImage?: string
+    backgroundVideo?: string
+  }
+  story: {
+    title: string
+    content: string
+    image?: string
+  }
+  mission?: {
+    title: string
+    content: string
+  }
+  vision?: {
+    title: string
+    content: string
+  }
+  values?: ChurchValue[]
+  beliefs?: {
+    title: string
+    items: string[] // Lista de crenças
+  }
+  leaders?: ChurchLeader[]
+  history?: {
+    title: string
+    milestones: ChurchHistoryMilestone[]
+  }
+  stats?: ChurchStats
 }
 
 export interface ChurchContact {
@@ -139,6 +199,96 @@ export interface ChurchCellsData {
   cells: ChurchCell[]
 }
 
+export interface ChurchFirstVisitFAQ {
+  id: string
+  question: string
+  answer: string
+}
+
+export interface ChurchFirstVisitExpectation {
+  id: string
+  title: string
+  description: string
+  icon: string
+}
+
+export interface ChurchFirstVisitTestimonial {
+  id: string
+  name: string
+  text: string
+  image?: string
+  role?: string
+}
+
+export interface ChurchFirstVisitNextStep {
+  id: string
+  title: string
+  description: string
+  icon: string
+  link?: string
+}
+
+export interface ChurchFirstVisit {
+  hero: {
+    title: string
+    subtitle?: string
+    backgroundImage?: string
+    ctaText?: string
+  }
+  welcome: {
+    title: string
+    content: string
+    image?: string
+  }
+  whatToExpect: {
+    title: string
+    subtitle?: string
+    items: ChurchFirstVisitExpectation[]
+  }
+  serviceInfo: {
+    title: string
+    items: {
+      label: string
+      value: string
+      icon: string
+    }[]
+  }
+  kids?: {
+    title: string
+    description: string
+    ageGroups: string[]
+    image?: string
+  }
+  parking?: {
+    title: string
+    description: string
+    tips?: string[]
+  }
+  dressCode?: {
+    title: string
+    description: string
+  }
+  testimonials?: {
+    title: string
+    items: ChurchFirstVisitTestimonial[]
+  }
+  nextSteps?: {
+    title: string
+    subtitle?: string
+    steps: ChurchFirstVisitNextStep[]
+  }
+  faq?: {
+    title: string
+    items: ChurchFirstVisitFAQ[]
+  }
+  contact: {
+    title: string
+    description: string
+    email?: string
+    phone?: string
+  }
+}
+
 export interface ChurchContent {
   hero: ChurchHeroContent
   actionCards: ChurchActionCard[]
@@ -148,6 +298,7 @@ export interface ChurchContent {
   cells?: ChurchCellsData
   about?: ChurchAbout
   contact?: ChurchContact
+  firstVisit?: ChurchFirstVisit
 }
 
 export interface ChurchMetadata {
