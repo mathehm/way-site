@@ -55,35 +55,35 @@ export const mockChurchData: Record<string, ChurchConfig> = {
           icon: 'mdi:account-plus',
           title: 'Primeira vez aqui?',
           description: 'Descubra quem somos',
-          link: '/new'
+          link: '/conheca#primeira-vez'
         },
         {
           id: '2',
           icon: 'mdi:lightning-bolt',
           title: 'Próximos Passos',
           description: 'Encontre seu propósito',
-          link: '/next'
+          link: '/conheca#proximos-passos'
         },
         {
           id: '3',
           icon: 'mdi:water',
           title: 'Batismos',
           description: 'Declare sua fé publicamente',
-          link: '/baptism'
+          link: '/conheca#batismos'
         },
         {
           id: '4',
           icon: 'mdi:earth',
           title: 'Pequenos Grupos',
           description: 'Conecte-se com pessoas',
-          link: '/groups'
+          link: '/conheca#pequenos-grupos'
         },
         {
           id: '5',
           icon: 'mdi:hand-heart',
           title: 'Servir',
           description: 'Faça parte do time',
-          link: '/serve'
+          link: '/conheca#servir'
         }
       ],
 
