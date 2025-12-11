@@ -345,6 +345,28 @@ export interface ChurchFirstVisit {
   }
 }
 
+export interface ChurchYouTubeLive {
+  videoId: string // ID do vídeo ao vivo (extraído do link)
+  isActive: boolean // Se a live está ativa no site
+  title: string // Título da transmissão
+  description?: string // Descrição da live
+  startedAt?: string // Quando iniciou (ISO 8601)
+}
+
+export interface ChurchYouTubeVideo {
+  videoId: string
+  title: string
+  thumbnail?: string
+  publishedAt?: string
+}
+
+export interface ChurchYouTube {
+  channelId?: string // ID do canal (ex: UCxxxxxxx)
+  channelHandle?: string // Handle do canal (ex: @igrejaexemplo)
+  currentLive?: ChurchYouTubeLive // Live atual
+  featuredVideos?: ChurchYouTubeVideo[] // Vídeos em destaque (últimos cultos)
+}
+
 export interface ChurchContent {
   hero: ChurchHeroContent
   actionCards: ChurchActionCard[]
@@ -355,6 +377,7 @@ export interface ChurchContent {
   about?: ChurchAbout
   contact?: ChurchContact
   firstVisit?: ChurchFirstVisit
+  youtube?: ChurchYouTube
 }
 
 export interface ChurchMetadata {

@@ -93,6 +93,7 @@ export const useChurchContent = () => {
   const locations = computed(() => config.value?.content.locations || [])
   const customization = computed(() => config.value?.customization || null)
   const ctaSections = computed(() => config.value?.content.ctaSections || [])
+  const youtube = computed(() => config.value?.content.youtube || null)
 
   return {
     content,
@@ -101,6 +102,7 @@ export const useChurchContent = () => {
     events,
     locations,
     customization,
-    ctaSections
+    ctaSections,
+    youtube
   }
 }

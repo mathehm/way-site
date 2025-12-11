@@ -667,6 +667,31 @@ export const mockChurchData: Record<string, ChurchConfig> = {
         address: 'Av. Faria Lima, 2000 - São Paulo, SP'
       },
 
+      youtube: {
+        channelHandle: '@igrejacomproposito',
+        currentLive: {
+          videoId: '0uaZ30NEHLU', // ID extraído do link de teste
+          isActive: true,
+          title: 'Culto de Celebração - Ao Vivo',
+          description: 'Junte-se a nós neste culto especial com louvor, palavra e comunhão.',
+          startedAt: '2025-12-11T10:00:00Z'
+        },
+        featuredVideos: [
+          {
+            videoId: '0uaZ30NEHLU',
+            title: 'Culto de Celebração - 08/12/2025'
+          },
+          {
+            videoId: 'dQw4w9WgXcQ',
+            title: 'Culto de Celebração - 01/12/2025'
+          },
+          {
+            videoId: 'dQw4w9WgXcQ',
+            title: 'Culto de Celebração - 24/11/2025'
+          }
+        ]
+      },
+
       firstVisit: {
         hero: {
           title: 'Seja Bem-Vindo!',
