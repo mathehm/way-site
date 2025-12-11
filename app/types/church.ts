@@ -345,12 +345,20 @@ export interface ChurchFirstVisit {
   }
 }
 
+export interface ChurchYouTubeLiveAnnouncement {
+  id: string
+  title: string
+  description: string
+  icon?: string // Nome do ícone (ex: "mdi:bullhorn", "mdi:calendar")
+}
+
 export interface ChurchYouTubeLive {
   videoId: string // ID do vídeo ao vivo (extraído do link)
   isActive: boolean // Se a live está ativa no site
   title: string // Título da transmissão
   description?: string // Descrição da live
   startedAt?: string // Quando iniciou (ISO 8601)
+  announcements?: ChurchYouTubeLiveAnnouncement[] // Recados da semana
 }
 
 export interface ChurchYouTubeVideo {

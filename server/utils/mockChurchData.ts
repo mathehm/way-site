@@ -674,7 +674,33 @@ export const mockChurchData: Record<string, ChurchConfig> = {
           isActive: true,
           title: 'Culto de Celebração - Ao Vivo',
           description: 'Junte-se a nós neste culto especial com louvor, palavra e comunhão.',
-          startedAt: '2025-12-11T10:00:00Z'
+          startedAt: '2025-12-11T10:00:00Z',
+          announcements: [
+            {
+              id: '1',
+              title: 'Oferta Missionária',
+              description: 'Hoje teremos nossa oferta missionária especial. Sua contribuição apoia missionários em todo o mundo.',
+              icon: 'mdi:hand-heart'
+            },
+            {
+              id: '2',
+              title: 'Acampamento de Jovens',
+              description: 'Inscrições abertas para o acampamento de jovens de 15 a 17 de janeiro. Vagas limitadas!',
+              icon: 'mdi:tent'
+            },
+            {
+              id: '3',
+              title: 'Reunião de Oração',
+              description: 'Toda quarta-feira às 19h30. Venha fortalecer sua fé conosco.',
+              icon: 'mdi:hands-pray'
+            },
+            {
+              id: '4',
+              title: 'Batismo',
+              description: 'Próximo batismo será dia 20 de dezembro. Se você deseja ser batizado, procure um líder.',
+              icon: 'mdi:water'
+            }
+          ]
         },
         featuredVideos: [
           {
