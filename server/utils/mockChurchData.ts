@@ -90,16 +90,30 @@ export const mockChurchData: Record<string, ChurchConfig> = {
       events: [
         {
           id: '1',
-          slug: 'ano-novo-2025',
-          title: 'Reveillon Worship Night',
-          subtitle: 'Virada com Propósito',
-          description: 'Uma noite para agradecer, celebrar e declarar um novo tempo.',
-          image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop',
-          backgroundColor: '#1f2937', // gray-800
-          startDate: '2025-12-31',
-          endDate: '2026-01-01',
-          ctaText: 'Participar',
-          ctaLink: '/events/ano-novo-2025'
+          slug: 'culto-domingo',
+          title: 'Culto de Celebração',
+          subtitle: 'Todo domingo',
+          description: 'Nosso culto principal com louvor, palavra e comunhão.',
+          longDescription: 'Junte-se a nós todos os domingos para um tempo de celebração e adoração. Nosso culto inclui louvor contemporâneo, mensagem bíblica relevante, oração e comunhão. Temos ministério infantil disponível para crianças de 0 a 12 anos.',
+          image: 'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop',
+          backgroundColor: '#1f2937',
+          category: 'culto' as const,
+          startDate: '2025-12-14T10:00:00',
+          time: '10h00 e 18h00',
+          location: {
+            name: 'Campus Central',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          isRecurring: true,
+          recurrence: {
+            frequency: 'weekly',
+            daysOfWeek: [0] // Domingo
+          },
+          featured: true,
+          tags: ['louvor', 'palavra', 'família'],
+          ctaText: 'Saiba mais',
+          ctaLink: '/conheca#primeira-vez'
         },
         {
           id: '2',
@@ -107,12 +121,339 @@ export const mockChurchData: Record<string, ChurchConfig> = {
           title: 'CONFERÊNCIA 2025',
           subtitle: 'Despertando uma Geração',
           description: 'Três dias de imersão com palavra, louvor e presença.',
-          image: 'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop',
-          backgroundColor: '#000000', // black
-          startDate: '2025-09-10',
-          endDate: '2025-09-12',
-          ctaText: 'Garanta sua vaga',
-          ctaLink: '/events/conferencia-2025'
+          longDescription: 'Nossa conferência anual reúne milhares de pessoas para três dias intensos de adoração, ensino bíblico profundo e experiências transformadoras. Com preletores nacionais e internacionais, louvor ao vivo e workshops práticos.',
+          image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop',
+          backgroundColor: '#000000',
+          category: 'conferencia' as const,
+          startDate: '2025-09-10T19:00:00',
+          endDate: '2025-09-12T22:00:00',
+          time: '19h00 - 22h00',
+          location: {
+            name: 'Centro de Convenções',
+            address: 'Rua das Convenções, 1000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/conferencia-2025/inscricao',
+            deadline: '2025-09-01',
+            price: 150,
+            spots: 3000,
+            spotsRemaining: 847
+          },
+          organizer: {
+            name: 'Ministério de Eventos',
+            email: 'eventos@icp.com.br',
+            phone: '(11) 98765-4321'
+          },
+          featured: true,
+          tags: ['conferência', 'palavra', 'louvor', 'comunhão'],
+          ctaText: 'Garantir vaga',
+          ctaLink: '/eventos/conferencia-2025'
+        },
+        {
+          id: '3',
+          slug: 'retiro-casais',
+          title: 'Retiro de Casais',
+          subtitle: 'Fortalecendo Relacionamentos',
+          description: 'Um fim de semana especial para casais fortalecerem seu relacionamento.',
+          longDescription: 'Dois dias dedicados ao seu casamento. Palestras com especialistas em relacionamentos, dinâmicas de casal, momentos de oração e muito romance. Inclui hospedagem, alimentação completa e material didático.',
+          image: 'https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&h=600&fit=crop',
+          backgroundColor: '#be185d',
+          category: 'retiro' as const,
+          startDate: '2025-02-14T16:00:00',
+          endDate: '2025-02-16T14:00:00',
+          location: {
+            name: 'Fazenda Vida Nova',
+            address: 'Estrada do Sol, Km 45 - Interior SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/retiro-casais/inscricao',
+            deadline: '2025-02-07',
+            price: 800,
+            spots: 50,
+            spotsRemaining: 12
+          },
+          featured: true,
+          tags: ['casais', 'retiro', 'relacionamento'],
+          ctaText: 'Inscrever-se',
+          ctaLink: '/eventos/retiro-casais'
+        },
+        {
+          id: '4',
+          slug: 'escola-profetas',
+          title: 'Escola de Profetas',
+          subtitle: 'Formação e Capacitação',
+          description: 'Curso intensivo de formação ministerial e liderança.',
+          longDescription: 'Um programa de 6 meses que prepara líderes e ministros através de ensino bíblico aprofundado, mentoria individual e prática ministerial supervisionada. Certificado reconhecido pela ABIEP.',
+          image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop',
+          backgroundColor: '#0891b2',
+          category: 'curso' as const,
+          startDate: '2025-03-01T19:00:00',
+          time: 'Sábados - 19h00 às 22h00',
+          location: {
+            name: 'Campus Central',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          isRecurring: true,
+          recurrence: {
+            frequency: 'weekly',
+            daysOfWeek: [6] // Sábado
+          },
+          registration: {
+            required: true,
+            link: '/eventos/escola-profetas/inscricao',
+            deadline: '2025-02-20',
+            price: 600,
+            spots: 80,
+            spotsRemaining: 23
+          },
+          tags: ['formação', 'liderança', 'ensino'],
+          ctaText: 'Fazer matrícula',
+          ctaLink: '/eventos/escola-profetas'
+        },
+        {
+          id: '5',
+          slug: 'batismo-marco',
+          title: 'Batismo nas Águas',
+          subtitle: 'Declare sua fé',
+          description: 'Cerimônia especial de batismo para novos convertidos.',
+          longDescription: 'Um momento marcante na vida de cada cristão. O batismo é um ato público de confissão de fé em Jesus Cristo. Antes do batismo, realizamos uma aula preparatória obrigatória para todos os candidatos.',
+          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=600&fit=crop',
+          backgroundColor: '#1e40af',
+          category: 'culto' as const,
+          startDate: '2025-03-23T10:00:00',
+          time: '10h00',
+          location: {
+            name: 'Campus Central',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/conheca#batismos',
+            deadline: '2025-03-16',
+            price: 0,
+            spots: 40,
+            spotsRemaining: 18
+          },
+          tags: ['batismo', 'fé', 'celebração'],
+          featured: true,
+          ctaText: 'Quero me batizar',
+          ctaLink: '/conheca#batismos'
+        },
+        {
+          id: '6',
+          slug: 'acampamento-jovens',
+          title: 'Acampamento de Jovens',
+          subtitle: 'Geração em Fogo',
+          description: 'Três dias de aventura, louvor e ensino para jovens de 15 a 25 anos.',
+          longDescription: 'Um acampamento inesquecível com atividades radicais, louvor impactante e palavra relevante. Inclui tirolesa, escalada, trilhas, fogueira, shows ao vivo e muito mais. Hospedagem em cabanas e alimentação completa.',
+          image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop',
+          backgroundColor: '#ea580c',
+          category: 'jovens' as const,
+          startDate: '2025-07-10T14:00:00',
+          endDate: '2025-07-13T12:00:00',
+          location: {
+            name: 'Base Aventura',
+            address: 'Serra da Mantiqueira - MG',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/acampamento-jovens/inscricao',
+            deadline: '2025-06-30',
+            price: 450,
+            spots: 150,
+            spotsRemaining: 67
+          },
+          featured: true,
+          tags: ['jovens', 'aventura', 'acampamento'],
+          ctaText: 'Garantir vaga',
+          ctaLink: '/eventos/acampamento-jovens'
+        },
+        {
+          id: '7',
+          slug: 'churrasco-familia',
+          title: 'Churrasco da Família',
+          subtitle: 'Comunhão e diversão',
+          description: 'Um sábado especial para confraternização de toda a igreja.',
+          longDescription: 'Momento de comunhão e diversão com toda a família da igreja. Churrasco completo, atividades para crianças, jogos recreativos e muito bate-papo. Traga sua família e amigos!',
+          image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop',
+          backgroundColor: '#16a34a',
+          category: 'social' as const,
+          startDate: '2025-04-12T11:00:00',
+          endDate: '2025-04-12T17:00:00',
+          time: '11h00 às 17h00',
+          location: {
+            name: 'Parque da Igreja',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/churrasco-familia/inscricao',
+            deadline: '2025-04-08',
+            price: 40,
+            spots: 300,
+            spotsRemaining: 143
+          },
+          tags: ['comunhão', 'família', 'social'],
+          ctaText: 'Confirmar presença',
+          ctaLink: '/eventos/churrasco-familia'
+        },
+        {
+          id: '8',
+          slug: 'reuniao-oracao',
+          title: 'Reunião de Oração',
+          subtitle: 'Intercessão e busca',
+          description: 'Encontro semanal dedicado à oração e intercessão.',
+          longDescription: 'Todas as quartas-feiras nos reunimos para buscar a face de Deus em oração. Um tempo de intercessão pela igreja, pela cidade, pelo país e pelas nações. Venha fortalecer sua vida de oração.',
+          image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+          backgroundColor: '#7c3aed',
+          category: 'reuniao' as const,
+          startDate: '2025-12-11T20:00:00',
+          time: '20h00',
+          location: {
+            name: 'Campus Central',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          isRecurring: true,
+          recurrence: {
+            frequency: 'weekly',
+            daysOfWeek: [3] // Quarta-feira
+          },
+          tags: ['oração', 'intercessão', 'busca'],
+          ctaText: 'Saiba mais',
+          ctaLink: '/oracao'
+        },
+        {
+          id: '9',
+          slug: 'projeto-missoes-africa',
+          title: 'Projeto Missões África',
+          subtitle: 'Levando esperança',
+          description: 'Viagem missionária para Moçambique com trabalho social e evangelístico.',
+          longDescription: 'Uma experiência missionária transformadora de 15 dias em Moçambique. Trabalharemos com igrejas locais em evangelismo, assistência social, construção e capacitação de líderes. Inclui passagem, hospedagem, alimentação e seguro viagem.',
+          image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&h=600&fit=crop',
+          backgroundColor: '#b91c1c',
+          category: 'missoes' as const,
+          startDate: '2025-08-15T06:00:00',
+          endDate: '2025-08-30T22:00:00',
+          location: {
+            name: 'Maputo, Moçambique',
+            address: 'Moçambique, África',
+          },
+          registration: {
+            required: true,
+            link: '/eventos/missoes-africa/inscricao',
+            deadline: '2025-06-15',
+            price: 5500,
+            spots: 20,
+            spotsRemaining: 6
+          },
+          organizer: {
+            name: 'Ministério de Missões',
+            email: 'missoes@icp.com.br',
+            phone: '(11) 98765-4321'
+          },
+          tags: ['missões', 'evangelismo', 'social'],
+          ctaText: 'Participar',
+          ctaLink: '/eventos/missoes-africa'
+        },
+        {
+          id: '10',
+          slug: 'workshop-adoracao',
+          title: 'Workshop de Adoração',
+          subtitle: 'Desenvolvendo músicos e cantores',
+          description: 'Capacitação prática para músicos e vocalistas do ministério de louvor.',
+          longDescription: 'Um sábado intensivo de capacitação musical e espiritual para membros e futuros membros do ministério de louvor. Aulas de técnica vocal, instrumentos, teoria musical, espiritualidade do adorador e prática em banda.',
+          image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop',
+          backgroundColor: '#db2777',
+          category: 'curso' as const,
+          startDate: '2025-05-17T09:00:00',
+          endDate: '2025-05-17T18:00:00',
+          time: '09h00 às 18h00',
+          location: {
+            name: 'Campus Central - Auditório',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/workshop-adoracao/inscricao',
+            deadline: '2025-05-10',
+            price: 80,
+            spots: 60,
+            spotsRemaining: 31
+          },
+          tags: ['louvor', 'música', 'capacitação'],
+          ctaText: 'Inscrever-se',
+          ctaLink: '/eventos/workshop-adoracao'
+        },
+        {
+          id: '11',
+          slug: 'kids-festival',
+          title: 'Kids Festival',
+          subtitle: 'Diversão garantida para as crianças',
+          description: 'Um dia especial com atividades, brincadeiras e ensino bíblico para crianças.',
+          longDescription: 'Festival para crianças de 4 a 12 anos com apresentações teatrais, oficinas de arte, brincadeiras, lanche especial e ensino bíblico criativo. Os pais podem deixar as crianças e aproveitar para fazer um passeio no shopping ao lado.',
+          image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop',
+          backgroundColor: '#f59e0b',
+          category: 'infantil' as const,
+          startDate: '2025-10-11T14:00:00',
+          endDate: '2025-10-11T18:00:00',
+          time: '14h00 às 18h00',
+          location: {
+            name: 'Campus Central - Área Kids',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/kids-festival/inscricao',
+            deadline: '2025-10-04',
+            price: 25,
+            spots: 200,
+            spotsRemaining: 89
+          },
+          tags: ['crianças', 'festival', 'família'],
+          ctaText: 'Inscrever meu filho',
+          ctaLink: '/eventos/kids-festival'
+        },
+        {
+          id: '12',
+          slug: 'ano-novo-2025',
+          title: 'Reveillon Worship Night',
+          subtitle: 'Virada com Propósito',
+          description: 'Uma noite para agradecer, celebrar e declarar um novo tempo.',
+          longDescription: 'Comece 2026 na presença de Deus! Uma noite especial de louvor, gratidão e declaração profética. Celebração de vitórias, queima de simbólica de papéis, oração de bênção sobre o novo ano e ceia da virada. Após meia-noite, confraternização com champanhe sem álcool e comes e bebes.',
+          image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop',
+          backgroundColor: '#1f2937',
+          category: 'culto' as const,
+          startDate: '2025-12-31T22:00:00',
+          endDate: '2026-01-01T02:00:00',
+          time: '22h00 - 02h00',
+          location: {
+            name: 'Campus Central',
+            address: 'Av. Faria Lima, 2000 - São Paulo, SP',
+            mapsLink: 'https://maps.google.com'
+          },
+          registration: {
+            required: true,
+            link: '/eventos/ano-novo-2025/inscricao',
+            deadline: '2025-12-28',
+            price: 0,
+            spots: 800,
+            spotsRemaining: 234
+          },
+          featured: true,
+          tags: ['celebração', 'ano novo', 'louvor'],
+          ctaText: 'Confirmar presença',
+          ctaLink: '/eventos/ano-novo-2025'
         }
       ],
 

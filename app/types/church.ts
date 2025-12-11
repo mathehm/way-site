@@ -58,18 +58,74 @@ export interface ChurchActionCard {
   link: string
 }
 
+export type ChurchEventCategory =
+  | 'culto'
+  | 'reuniao'
+  | 'conferencia'
+  | 'retiro'
+  | 'curso'
+  | 'social'
+  | 'missoes'
+  | 'infantil'
+  | 'jovens'
+  | 'outro'
+
 export interface ChurchEvent {
   id: string
   slug: string
   title: string
   subtitle?: string
   description: string
+  longDescription?: string
   image: string
   backgroundColor?: string // Cor de fundo customizada para o card
-  startDate: string
-  endDate?: string
+  category: ChurchEventCategory
+  startDate: string // ISO 8601 format
+  endDate?: string // ISO 8601 format
+  time?: string // Ex: "19h30" ou "10h00 - 12h00"
+  location?: {
+    name?: string
+    address?: string
+    mapsLink?: string
+  }
+  isRecurring?: boolean
+  recurrence?: {
+    frequency: 'weekly' | 'monthly' | 'yearly'
+    interval?: number // Ex: a cada 2 semanas
+    daysOfWeek?: number[] // 0 = domingo, 1 = segunda, etc
+  }
+  registration?: {
+    required: boolean
+    link?: string
+    deadline?: string
+    price?: number
+    spots?: number
+    spotsRemaining?: number
+  }
+  organizer?: {
+    name: string
+    email?: string
+    phone?: string
+  }
+  tags?: string[]
+  featured?: boolean
   ctaText: string
   ctaLink: string
+}
+
+export interface ChurchEventsPageData {
+  hero: {
+    title: string
+    subtitle?: string
+    backgroundImage?: string
+  }
+  featured?: ChurchEvent[]
+  upcoming?: ChurchEvent[]
+  categories?: {
+    id: ChurchEventCategory
+    name: string
+    icon: string
+  }[]
 }
 
 export interface ChurchLocation {
