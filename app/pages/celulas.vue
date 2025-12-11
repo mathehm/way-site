@@ -66,19 +66,22 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Map Section -->
         <div class="lg:col-span-2">
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div ref="mapContainer" class="h-[600px] w-full"></div>
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden relative z-0">
+            <div
+              ref="mapContainer"
+              class="h-[320px] sm:h-[380px] md:h-[460px] lg:h-[600px] w-full"
+            ></div>
           </div>
         </div>
 
         <!-- Cell Details Panel -->
         <div class="lg:col-span-1">
-          <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+          <div class="bg-white rounded-xl shadow-lg p-4 md:p-6 lg:sticky lg:top-24" data-cell-detail-panel>
             <div v-if="selectedCell">
               <!-- Cell Image -->
               <div
                 v-if="selectedCell.image"
-                class="w-full h-48 rounded-lg mb-4 overflow-hidden"
+                class="w-full h-40 md:h-48 rounded-lg mb-4 overflow-hidden"
               >
                 <img
                   :src="selectedCell.image"
@@ -89,77 +92,77 @@
 
               <!-- Network Badge -->
               <div
-                class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white mb-3"
+                class="inline-block px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-white mb-3"
                 :style="{ backgroundColor: selectedCellNetwork?.color || '#2563eb' }"
               >
                 {{ selectedCellNetwork?.name }}
               </div>
 
               <!-- Cell Name -->
-              <h2 class="text-2xl font-bold mb-2">{{ selectedCell.name }}</h2>
+              <h2 class="text-xl md:text-2xl font-bold mb-2">{{ selectedCell.name }}</h2>
 
               <!-- Leaders -->
-              <div class="mb-4">
-                <p class="text-sm font-semibold text-gray-700 mb-1">Líderes:</p>
-                <p class="text-gray-600">{{ selectedCell.leaders.join(', ') }}</p>
+              <div class="mb-3 md:mb-4">
+                <p class="text-xs md:text-sm font-semibold text-gray-700 mb-1">Líderes:</p>
+                <p class="text-sm text-gray-600">{{ selectedCell.leaders.join(', ') }}</p>
               </div>
 
               <!-- Schedule -->
-              <div class="mb-4 flex items-start">
-                <Icon name="mdi:calendar-clock" class="text-primary text-xl mr-2 mt-0.5" />
+              <div class="mb-3 md:mb-4 flex items-start">
+                <Icon name="mdi:calendar-clock" class="text-primary text-lg md:text-xl mr-2 mt-0.5" />
                 <div>
-                  <p class="font-semibold text-gray-700">{{ selectedCell.day }}</p>
-                  <p class="text-gray-600">{{ selectedCell.time }}</p>
+                  <p class="text-sm md:text-base font-semibold text-gray-700">{{ selectedCell.day }}</p>
+                  <p class="text-sm text-gray-600">{{ selectedCell.time }}</p>
                 </div>
               </div>
 
               <!-- Address -->
-              <div class="mb-4 flex items-start">
-                <Icon name="mdi:map-marker" class="text-primary text-xl mr-2 mt-0.5" />
+              <div class="mb-3 md:mb-4 flex items-start">
+                <Icon name="mdi:map-marker" class="text-primary text-lg md:text-xl mr-2 mt-0.5" />
                 <div>
-                  <p class="text-gray-600">{{ selectedCell.address }}</p>
+                  <p class="text-sm text-gray-600">{{ selectedCell.address }}</p>
                 </div>
               </div>
 
               <!-- Phone -->
-              <div class="mb-6 flex items-start">
-                <Icon name="mdi:phone" class="text-primary text-xl mr-2 mt-0.5" />
+              <div class="mb-5 md:mb-6 flex items-start">
+                <Icon name="mdi:phone" class="text-primary text-lg md:text-xl mr-2 mt-0.5" />
                 <div>
                   <a
                     :href="`tel:${selectedCell.phone.replace(/\D/g, '')}`"
                     class="text-primary hover:text-primary-dark transition-colors"
                   >
-                    {{ selectedCell.phone }}
+                    <span class="text-sm md:text-base">{{ selectedCell.phone }}</span>
                   </a>
                 </div>
               </div>
 
               <!-- Description -->
-              <div class="mb-6">
-                <p class="text-gray-600 text-sm leading-relaxed">
+              <div class="mb-5 md:mb-6">
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
                   {{ selectedCell.description }}
                 </p>
               </div>
 
               <!-- Actions -->
-              <div class="space-y-3">
+              <div class="flex gap-2 md:flex-col md:gap-3">
                 <a
                   :href="selectedCell.mapsLink"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn-primary w-full text-center flex items-center justify-center"
+                  class="btn-primary flex-1 md:w-full text-center flex items-center justify-center px-3 py-2 md:px-6 md:py-3 text-xs md:text-base"
                 >
-                  <Icon name="mdi:google-maps" class="mr-2" />
-                  Ver no Google Maps
+                  <Icon name="mdi:google-maps" class="text-lg md:text-base md:mr-2" />
+                  <span class="hidden md:inline">Ver no Google Maps</span>
                 </a>
                 <a
                   :href="`https://wa.me/${selectedCell.phone.replace(/\D/g, '')}`"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-full bg-green-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-green-600 hover:shadow-lg flex items-center justify-center"
+                  class="flex-1 md:w-full bg-green-500 text-white px-3 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-green-600 hover:shadow-lg flex items-center justify-center text-xs md:text-base"
                 >
-                  <Icon name="mdi:whatsapp" class="mr-2" />
-                  Entrar em Contato
+                  <Icon name="mdi:whatsapp" class="text-lg md:text-base md:mr-2" />
+                  <span class="hidden md:inline">Entrar em Contato</span>
                 </a>
               </div>
             </div>
@@ -179,7 +182,7 @@
       <!-- Cell List (Mobile/Tablet friendly) -->
       <div class="mt-12">
         <h2 class="text-2xl font-bold mb-6">Lista de {{ cellNamePlural }}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <div
             v-for="cell in filteredCells"
             :key="cell.id"
@@ -189,7 +192,7 @@
             <!-- Cell Image -->
             <div
               v-if="cell.image"
-              class="w-full h-48 overflow-hidden"
+              class="w-full h-40 sm:h-44 md:h-48 overflow-hidden"
             >
               <img
                 :src="cell.image"
@@ -198,7 +201,7 @@
               />
             </div>
 
-            <div class="p-6">
+            <div class="p-4 sm:p-5 md:p-6">
               <!-- Network Badge -->
               <div
                 class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3"
@@ -208,7 +211,7 @@
               </div>
 
               <!-- Cell Name -->
-              <h3 class="text-xl font-bold mb-2">{{ cell.name }}</h3>
+              <h3 class="text-lg sm:text-xl font-bold mb-2">{{ cell.name }}</h3>
 
               <!-- Leaders -->
               <p class="text-sm text-gray-600 mb-3">{{ cell.leaders.join(', ') }}</p>
@@ -241,7 +244,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch, watchEffect } from 'vue'
 import type { ChurchCell, ChurchCellNetwork } from '~/types/church'
 
 // Church config
@@ -275,6 +278,9 @@ const mapContainer = ref<HTMLElement | null>(null)
 let map: any = null
 let markers: any[] = []
 
+const route = useRoute()
+const router = useRouter()
+
 // Computed
 const filteredCells = computed(() => {
   if (!selectedNetworkId.value) return cells.value
@@ -305,19 +311,50 @@ function getCellNetwork(networkId: string): ChurchCellNetwork | undefined {
 }
 
 function selectCell(cellId: string) {
-  selectedCellId.value = cellId
+  focusCell(cellId, { syncQuery: true })
+}
 
-  // Scroll to details panel on mobile
-  if (window.innerWidth < 1024) {
-    const panel = document.querySelector('.sticky')
+function focusCell(
+  cellId: string,
+  options: { scroll?: boolean; syncQuery?: boolean } = {}
+) {
+  const { scroll = true, syncQuery = false } = options
+  const targetCell = cells.value.find(cell => cell.id === cellId)
+
+  if (!targetCell) return
+
+  selectedCellId.value = targetCell.id
+
+  if (process.client && scroll && window.innerWidth < 1024) {
+    const panel = document.querySelector('[data-cell-detail-panel]')
     panel?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  // Center map on selected cell
-  const cell = cells.value.find(c => c.id === cellId)
-  if (cell && map) {
-    map.setView([cell.coordinates.lat, cell.coordinates.lng], 15)
+  if (map) {
+    centerSelectedCellOnMap()
   }
+
+  if (syncQuery) {
+    const currentCellId = Array.isArray(route.query.cellId)
+      ? route.query.cellId[0]
+      : route.query.cellId
+
+    if (currentCellId !== targetCell.id) {
+      router.replace({
+        query: {
+          ...route.query,
+          cellId: targetCell.id
+        }
+      })
+    }
+  }
+}
+
+function centerSelectedCellOnMap(zoom = 15) {
+  if (!map || !selectedCell.value) return
+
+  const { coordinates } = selectedCell.value
+  map.setView([coordinates.lat, coordinates.lng], zoom)
 }
 
 function filterByNetwork(networkId: string | null) {
@@ -423,6 +460,10 @@ function updateMapMarkers() {
     const group = L.featureGroup(markers)
     map.fitBounds(group.getBounds().pad(0.1))
   }
+
+  if (selectedCell.value) {
+    centerSelectedCellOnMap()
+  }
 }
 
 // Make selectCell available globally for popup buttons
@@ -435,6 +476,17 @@ watch(filteredCells, () => {
   if (map) {
     updateMapMarkers()
   }
+})
+
+watchEffect(() => {
+  const rawCellId = route.query.cellId
+  const cellId = Array.isArray(rawCellId) ? rawCellId[0] : rawCellId
+
+  if (!cellId) return
+  if (cells.value.length === 0) return
+  if (selectedCellId.value === cellId) return
+
+  focusCell(cellId, { syncQuery: false })
 })
 
 // Initialize map on mount

@@ -146,7 +146,17 @@ function primaryColorWithOpacity(opacity: number): string {
 }
 
 function navigateToCells(cellId?: string) {
-  navigateTo('/celulas')
+  if (!cellId) {
+    navigateTo('/celulas')
+    return
+  }
+
+  navigateTo({
+    path: '/celulas',
+    query: {
+      cellId
+    }
+  })
 }
 </script>
 
