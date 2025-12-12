@@ -1,16 +1,16 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
     <!-- Hero Section -->
-    <section class="relative p-20 bg-primary text-white overflow-hidden">
-      <div class="container mx-auto relative z-10">
-        <h1 class="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
-          Contribua com a Obra
-        </h1>
-        <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+    <section class="relative bg-gradient-to-br from-primary to-primary-dark text-white py-16">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <h1 class="text-xl md:text-4xl font-bold mb-4">Contribua com a Obra</h1>
+        <p class="text-lg md:text-xl opacity-90">
           Sua generosidade nos permite continuar impactando vidas, servindo a comunidade e levando esperança através do evangelho.
         </p>
       </div>
     </section>
+
 
     <!-- Main Content -->
     <section class="py-12 md:py-16">
