@@ -1,11 +1,11 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Hero -->
-    <section class="relative bg-primary text-white py-24 md:py-32">
+    <section class="relative bg-primary text-white py-16">
       <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
       <div class="container mx-auto px-4 relative z-10 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Conheça Nossa Igreja</h1>
-        <p class="text-xl md:text-2xl opacity-95 max-w-3xl mx-auto">
+        <h1 class="text-xl md:text-4xl font-bold mb-4">Conheça Nossa Igreja</h1>
+        <p class="text-lg md:text-xl opacity-95">
           Estamos felizes que você está aqui. Explore as formas de se conectar e crescer conosco!
         </p>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <section v-if="locations && locations.length > 0" class="py-20 bg-primary text-white">
+  <section v-if="locations && locations.length > 0" class="py-16 bg-primary text-white">
     <div class="container mx-auto px-4">
       <!-- Header -->
       <div class="text-center mb-12">

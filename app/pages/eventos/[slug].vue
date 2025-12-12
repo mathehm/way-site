@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Loading State -->
-    <div v-if="pending" class="container mx-auto px-4 py-20">
+    <div v-if="pending" class="container mx-auto px-4 py-16">
       <div class="text-center">
         <Icon name="mdi:loading" class="text-5xl text-primary animate-spin" />
         <p class="text-gray-600 mt-4">Carregando evento...</p>
@@ -9,7 +9,7 @@
     </div>
 
     <!-- Error State -->
-    <div v-else-if="error || !data?.success" class="container mx-auto px-4 py-20">
+    <div v-else-if="error || !data?.success" class="container mx-auto px-4 py-16">
       <div class="text-center">
         <Icon name="mdi:alert-circle" class="text-5xl text-red-500" />
         <p class="text-gray-600 mt-4">Evento não encontrado</p>

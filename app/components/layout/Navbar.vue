@@ -172,9 +172,9 @@ const showMobileDropdown = ref(false)
 
 const simpleMenuItems = [
   { label: 'Sobre', link: '/sobre' },
-  { label: 'Localizações', link: '/locations' },
   { label: 'Células', link: '/celulas' },
-  { label: 'Eventos', link: '/eventos' }
+  { label: 'Eventos', link: '/eventos' },
+  { label: 'Contribuição', link: '/contribuicao' }
 ]
 
 const conhecaItems = [

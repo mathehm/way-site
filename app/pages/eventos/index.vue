@@ -1,16 +1,13 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary to-primary-dark text-white py-20">
+    <section class="relative bg-gradient-to-br from-primary to-primary-dark text-white py-16">
       <div class="absolute inset-0 bg-black/20"></div>
       <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-          <Icon name="mdi:calendar-star" class="text-6xl mb-4 opacity-90" />
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Eventos</h1>
-          <p class="text-xl opacity-90">
-            Participe dos nossos eventos e faça parte da nossa comunidade
-          </p>
-        </div>
+        <h1 class="text-xl md:text-4xl font-bold mb-4">Eventos</h1>
+        <p class="text-lg md:text-xl opacity-90">
+          Participe dos nossos eventos e faça parte da nossa comunidade
+        </p>
       </div>
     </section>
 

@@ -3,9 +3,6 @@
     <!-- Hero Section (sempre presente) -->
     <HomeHeroSection />
 
-    <!-- LiveSection sobreposto (quando há transmissão ativa) -->
-    <HomeLiveSection v-if="isLive" />
-
     <!-- Action Cards -->
     <HomeActionCards />
 
@@ -17,17 +14,15 @@
 
     <!-- CTA Sections (como Activate) -->
     <HomeCTASections />
+
+    <!-- Floating Live Card (fixed position, minimizable) -->
+    <LiveFloatingCard />
   </div>
 </template>
 
 <script setup lang="ts">
 // SEO para a página inicial
 const { churchName, metadata } = useChurchMeta()
-const { youtube } = useChurchContent()
-
-const isLive = computed(() => {
-  return youtube.value?.currentLive?.isActive ?? false
-})
 
 useHead({
   title: 'Início'

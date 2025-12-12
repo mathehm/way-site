@@ -1,5 +1,5 @@
 <template>
-  <section v-if="displayCells.length > 0" class="py-20 bg-gray-50">
+  <section v-if="displayCells.length > 0" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">

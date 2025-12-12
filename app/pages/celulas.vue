@@ -3,7 +3,7 @@
     <!-- Header -->
     <section class="bg-primary text-white py-16">
       <div class="container mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
           {{ cellName }}
         </h1>
         <p class="text-lg md:text-xl opacity-90">
