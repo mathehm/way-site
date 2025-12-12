@@ -16,7 +16,7 @@
     <div v-else-if="aboutData">
       <!-- Hero Section -->
       <section
-        class="relative bg-gray-900 text-white py-24 md:py-32"
+        class="relative bg-gray-900 text-white py-20"
         :style="aboutData.hero.backgroundImage ? {
           backgroundImage: `url(${aboutData.hero.backgroundImage})`,
           backgroundSize: 'cover',
@@ -24,41 +24,13 @@
         } : {}"
       >
         <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container mx-auto px-4 relative z-10">
-          <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        <div class="container mx-auto relative z-10">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">
             {{ aboutData.hero.title }}
           </h1>
-          <p v-if="aboutData.hero.subtitle" class="text-xl md:text-2xl opacity-90 max-w-3xl">
+          <p v-if="aboutData.hero.subtitle" class="text-lg md:text-xl opacity-90 max-w-3xl">
             {{ aboutData.hero.subtitle }}
           </p>
-        </div>
-      </section>
-
-      <!-- Stats Section -->
-      <section v-if="aboutData.stats" class="py-12 bg-primary text-white">
-        <div class="container mx-auto px-4">
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
-            <div v-if="aboutData.stats.yearsActive">
-              <div class="text-4xl md:text-5xl font-bold mb-2">{{ aboutData.stats.yearsActive }}+</div>
-              <div class="text-sm md:text-base opacity-90">Anos de História</div>
-            </div>
-            <div v-if="aboutData.stats.members">
-              <div class="text-4xl md:text-5xl font-bold mb-2">{{ formatNumber(aboutData.stats.members) }}</div>
-              <div class="text-sm md:text-base opacity-90">Membros</div>
-            </div>
-            <div v-if="aboutData.stats.locations">
-              <div class="text-4xl md:text-5xl font-bold mb-2">{{ aboutData.stats.locations }}</div>
-              <div class="text-sm md:text-base opacity-90">Campus</div>
-            </div>
-            <div v-if="aboutData.stats.cells">
-              <div class="text-4xl md:text-5xl font-bold mb-2">{{ aboutData.stats.cells }}+</div>
-              <div class="text-sm md:text-base opacity-90">{{ cellName }}s</div>
-            </div>
-            <div v-if="aboutData.stats.ministries">
-              <div class="text-4xl md:text-5xl font-bold mb-2">{{ aboutData.stats.ministries }}+</div>
-              <div class="text-sm md:text-base opacity-90">Ministérios</div>
-            </div>
-          </div>
         </div>
       </section>
 

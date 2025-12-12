@@ -177,14 +177,6 @@ export interface ChurchHistoryMilestone {
   image?: string
 }
 
-export interface ChurchStats {
-  members?: number
-  yearsActive?: number
-  locations?: number
-  cells?: number
-  ministries?: number
-}
-
 export interface ChurchAbout {
   hero: {
     title: string
@@ -215,7 +207,6 @@ export interface ChurchAbout {
     title: string
     milestones: ChurchHistoryMilestone[]
   }
-  stats?: ChurchStats
 }
 
 export interface ChurchContact {

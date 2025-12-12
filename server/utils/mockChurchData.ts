@@ -652,13 +652,6 @@ export const mockChurchData: Record<string, ChurchConfig> = {
             }
           ]
         },
-        stats: {
-          members: 2000,
-          yearsActive: 15,
-          locations: 4,
-          cells: 45,
-          ministries: 12
-        }
       },
 
       contact: {
